@@ -1,5 +1,5 @@
-# arrow
-Arrow plot for matplotlib
+# mpl-arrow
+A simpler way to draw nice arrows in matplotlib
 
 ## Installation
 `pip install mpl-arrow`
