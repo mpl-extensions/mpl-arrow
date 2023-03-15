@@ -1,9 +1,10 @@
 # arrow
 Arrow plot for matplotlib
 
+## Installation
+`pip install git+https://github.com/kmdalton/easy-arrow`
 
-Example usage:
-
+## Example usage:
 ```python
 from matplotlib import pyplot as plt
 import numpy as np
