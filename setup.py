@@ -1,40 +1,24 @@
-from setuptools import setup, find_packages
+import sys
 
-# Get version number
-def getVersionNumber():
-    with open("easy_arrow/VERSION", "r") as vfile:
-        version = vfile.read().strip()
-    return version
-
-
-__version__ = getVersionNumber()
-
-PROJECT_URLS = {
-    "Bug Tracker": "https://github.com/kmdalton/easy-arrow/issues",
-    "Source Code": "https://github.com/kmdalton/easy-arrow",
-}
-
-
-LONG_DESCRIPTION = """
-This is a simple alternative for drawing fancy arrows in matplotlib.
+sys.stderr.write(
+    """
+===============================
+Unsupported installation method
+===============================
+mpl-arrow does not support installation with `python setup.py install`.
+Please use `python -m pip install .` instead.
 """
-
-setup(
-    name="easy-arrow",
-    version=__version__,
-    author="Kevin M. Dalton",
-    license="MIT",
-    include_package_data=True,
-    packages=find_packages(),
-    long_description=LONG_DESCRIPTION,
-    description="Easily plot nice-looking arrows with matplotlib",
-    project_urls=PROJECT_URLS,
-    python_requires=">=3.6",
-    url="https://github.com/kmdalton/easy-arrow",
-    install_requires=[
-        "matplotlib",
-    ],
-    setup_requires=["pytest-runner"],
-    tests_require=["pytest", "pytest-cov"],
 )
+sys.exit(1)
 
+
+# The below code will never execute, however GitHub is particularly
+# picky about where it finds Python packaging metadata.
+# See: https://github.com/github/feedback/discussions/6456
+#
+# To be removed once GitHub catches up.
+
+setup(  # noqa
+    name="mpl-arrow",
+    install_requires=[],
+)

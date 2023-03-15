@@ -1,0 +1,21 @@
+{
+  "template": "https://github.com/ianhi/pyrepo-cookiecutter",
+  "commit": "91e48fd8a99de0221b538be1781630e323d38f87",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "full_name": "Kevin M. Dalton, Ian Hunt-Isaak",
+      "email": "kevinmdalton@gmail.com, ianhuntisaak@gmail.com",
+      "github_username": "mpl-extensions",
+      "project_name": "mpl-arrow",
+      "project_slug": "mpl_arrow",
+      "project_short_description": "Easily plot nice-looking arrows with matplotlib",
+      "pypi_username": "ianhi",
+      "_copy_without_render": [
+        ".github/workflows/*"
+      ],
+      "_template": "https://github.com/ianhi/pyrepo-cookiecutter"
+    }
+  },
+  "directory": null
+}

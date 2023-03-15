@@ -1,8 +1,10 @@
 import matplotlib.patches as mpatches
 
-def arrow(ax, dx, dy, x=0., y=0., shrinkA=0., shrinkB=0., **kwargs):
+
+def arrow(ax, dx, dy, x=0.0, y=0.0, shrinkA=0.0, shrinkB=0.0, **kwargs):
     """
     Plot an arrow indicating a vector.
+
     Parameters
     ----------
     dx : float
@@ -13,14 +15,14 @@ def arrow(ax, dx, dy, x=0., y=0., shrinkA=0., shrinkB=0., **kwargs):
         The x-coordinate of the vector's base if nonzero.
     y : float (optional)
         The y-coordinate of the vector's base if nonzero.
+
     Other Parameters
     ----------------
     **kwargs
-    `~matplotlib.patches.FancyArrowPatch` properties
+    `~matplotlib.patches.FancyArrowPatch` properties.
     """
     posA = (x, y)
     posB = (x + dx, y + dy)
-
 
     stylekw = {
         "head_length": kwargs.pop("head_length", 12),
@@ -31,7 +33,9 @@ def arrow(ax, dx, dy, x=0., y=0., shrinkA=0., shrinkB=0., **kwargs):
     if color is None:
         color = ax._get_lines.get_next_color()
 
-    vect = mpatches.FancyArrowPatch(posA, posB, color=color, shrinkA=shrinkA, shrinkB=shrinkB, **kwargs)
+    vect = mpatches.FancyArrowPatch(
+        posA, posB, color=color, shrinkA=shrinkA, shrinkB=shrinkB, **kwargs
+    )
     ms = vect._mutation_scale
 
     for k in ["head_length", "tail_width", "head_width"]:
@@ -41,5 +45,3 @@ def arrow(ax, dx, dy, x=0., y=0., shrinkA=0., shrinkB=0., **kwargs):
     ax.update_datalim([posA, posB])
     ax._request_autoscale_view()
     return vect
-
-
