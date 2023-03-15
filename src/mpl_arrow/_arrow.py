@@ -1,7 +1,7 @@
 import matplotlib.patches as mpatches
 
 
-def arrow(ax, dx, dy, x=0.0, y=0.0, shrinkA=0.0, shrinkB=0.0, **kwargs):
+def arrow(dx, dy, x=0.0, y=0.0, ax=None, **kwargs):
     """
     Plot an arrow indicating a vector.
 
@@ -15,14 +15,19 @@ def arrow(ax, dx, dy, x=0.0, y=0.0, shrinkA=0.0, shrinkB=0.0, **kwargs):
         The x-coordinate of the vector's base if nonzero.
     y : float (optional)
         The y-coordinate of the vector's base if nonzero.
-
-    Other Parameters
-    ----------------
+    ax : `~matplotlib.axes.axis`, optional
+        If *None* get the current axis from pyplot
     **kwargs
-    `~matplotlib.patches.FancyArrowPatch` properties.
+        `~matplotlib.patches.FancyArrowPatch` properties.
     """
+    if ax is None:
+        from matplotlib.pyplot import gca
+        ax = gca()
     posA = (x, y)
     posB = (x + dx, y + dy)
+
+    shrinkA = kwargs.pop("shrinkA", 0.0)
+    shrinkB = kwargs.pop("shrinkB", 0.0)
 
     stylekw = {
         "head_length": kwargs.pop("head_length", 12),
