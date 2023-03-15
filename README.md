@@ -15,4 +15,4 @@ for x,y in np.random.random((10, 2)):
 plt.show()
 ```
 
-[arrows](img/arrows.png)
+![arrows](img/arrows.png)
