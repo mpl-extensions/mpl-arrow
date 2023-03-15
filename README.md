@@ -2,7 +2,7 @@
 Arrow plot for matplotlib
 
 ## Installation
-`pip install git+https://github.com/kmdalton/easy-arrow`
+`pip install mpl-arrow`
 
 ## Example usage:
 ```python
