@@ -42,7 +42,7 @@ subprocess.call(
             "--no-toc",
             "--templatedir _templates",
             "--separate",
-            "../mpl_arrow/",
+            "../src/mpl_arrow/",
             # excluded modules
             # nothing here for cookiecutter
         ]
@@ -63,6 +63,7 @@ extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.inheritance_diagram",
     "autoapi.sphinx",
+    "sphinx.ext.intersphinx",
 ]
 
 # API settings
