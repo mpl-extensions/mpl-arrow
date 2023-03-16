@@ -12,14 +12,26 @@ A simpler way to draw nice arrows in matplotlib
 
 ## Example usage:
 ```python
-from matplotlib import pyplot as plt
-import numpy as np
-from easy_arrow import arrow
+import matplotlib.pyplot as plt
 
-ax = plt.gca()
-for x,y in np.random.random((10, 2)):
-        arrow(ax, x, y)
+from mpl_arrow import arrow, arrow_absolute, vector
+
+fig, ax = plt.subplots()
+
+#     x, y, dx, dy
+arrow(1, 0, 2, 0.5, label="arrow")
+
+#              x,  y,  x2,  y2
+arrow_absolute(1, 0.5, 3.5, 2, label="arrow absolute")
+
+#     dx, dy
+vector(4, 4, label="vector")
+
+#     dx, dy, x,    y
+vector(4, 4, x=0, y=2, label="vector with offset")
+
+plt.legend()
 plt.show()
 ```
 
-![arrows](img/arrow.png)
+![arrows](img/readme_img.png)
