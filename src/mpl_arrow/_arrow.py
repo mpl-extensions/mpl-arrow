@@ -1,7 +1,13 @@
 import matplotlib.patches as mpatches
 
+__all__ = [
+    "arrow",
+    "arrow_absolute",
+    "vector",
+]
 
-def arrow(dx, dy, x=0.0, y=0.0, ax=None, **kwargs):
+
+def vector(dx, dy, x=0, y=0, ax=None, **kwargs):
     """
     Plot an arrow indicating a vector.
 
@@ -19,9 +25,66 @@ def arrow(dx, dy, x=0.0, y=0.0, ax=None, **kwargs):
         If *None* get the current axis from pyplot
     **kwargs
         `~matplotlib.patches.FancyArrowPatch` properties.
+
+    Returns
+    -------
+        `~matplotlib.patches.FancyArrowPatch`
+    """
+    return arrow(x, y, dx, dy, ax, **kwargs)
+
+
+def arrow_absolute(x, y, x2, y2, ax=None, **kwargs):
+    """
+    Plot an arrow between two points in data space.
+
+    Parameters
+    ----------
+    x : float
+        The x-coordinate of the arrows's base.
+    y : float
+        The y-coordinate of the arrows's base.
+    x2 : float
+        The x-coordinate of the arrows's tip.
+    y2 : float
+        The y-coordinate of the arrows's tip.
+    ax : `~matplotlib.axes.axis`, optional
+        If *None* get the current axis from pyplot
+    **kwargs
+        `~matplotlib.patches.FancyArrowPatch` properties.
+
+    Returns
+    -------
+        `~matplotlib.patches.FancyArrowPatch`
+    """
+    return arrow(x, y, x2 - x, y2 - y, ax, **kwargs)
+
+
+def arrow(x, y, dx, dy, ax=None, **kwargs):
+    """
+    Plot an arrow with a base and offset defined in data space.
+
+    Parameters
+    ----------
+    x : float
+        The x-coordinate of the arrow's base.
+    y : float
+        The y-coordinate of the arrow's base.
+    dx : float
+        The x component from the base to tip.
+    dy : float
+        The x component from the base to tip.
+    ax : `~matplotlib.axes.axis`, optional
+        If *None* get the current axis from pyplot
+    **kwargs
+        `~matplotlib.patches.FancyArrowPatch` properties.
+
+    Returns
+    -------
+        `~matplotlib.patches.FancyArrowPatch`
     """
     if ax is None:
         from matplotlib.pyplot import gca
+
         ax = gca()
     posA = (x, y)
     posB = (x + dx, y + dy)
