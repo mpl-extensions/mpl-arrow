@@ -9,8 +9,10 @@ except PackageNotFoundError:
 __author__ = "Kevin M. Dalton, Ian Hunt-Isaak"
 __email__ = "kevinmdalton@gmail.com, ianhuntisaak@gmail.com"
 
-from ._arrow import arrow
+from ._arrow import arrow, arrow_absolute, vector
 
 __all__ = [
     "arrow",
+    "arrow_absolute",
+    "vector",
 ]

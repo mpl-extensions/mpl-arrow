@@ -40,6 +40,16 @@ dev = [
     "rich",
     "ruff",
 ]
+doc = [
+    "autoapi",
+    "furo",
+    "numpydoc",
+    "sphinx",
+    "sphinx-autobuild",
+    "sphinx-copybutton",
+    "sphinx_gallery>=0.8.2",
+    "jupyterlite-sphinx",
+]
 
 [project.urls]
 homepage = "https://github.com/mpl-extensions/mpl-arrow"
