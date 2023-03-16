@@ -106,3 +106,4 @@ ENV/
 
 mpl_arrow/_version.py
 src/mpl_arrow/_version.py
+docs/api
