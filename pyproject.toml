@@ -41,14 +41,13 @@ dev = [
     "ruff",
 ]
 doc = [
+    "myst_nb",
     "autoapi",
     "furo",
     "numpydoc",
     "sphinx",
     "sphinx-autobuild",
     "sphinx-copybutton",
-    "sphinx_gallery>=0.8.2",
-    "jupyterlite-sphinx",
 ]
 
 [project.urls]
