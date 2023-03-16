@@ -3,6 +3,7 @@
 [![Python Version](https://img.shields.io/pypi/pyversions/mpl-arrow.svg?color=green)](https://python.org)
 [![CI](https://github.com/mpl-extensions/mpl-arrow/actions/workflows/ci.yml/badge.svg)](https://github.com/mpl-extensions/mpl-arrow/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/mpl-extensions/mpl-arrow/branch/main/graph/badge.svg)](https://codecov.io/gh/mpl-extensions/mpl-arrow)
+[![Documentation Status](https://readthedocs.org/projects/mpl-arrow/badge/?version=stable)](https://mpl-arrow.readthedocs.io/en/stable/?badge=stable)
 
 # mpl-arrow
 A simpler way to draw nice arrows in matplotlib
