@@ -205,4 +205,4 @@ def linkcode_resolve(domain, info):
 
     fn = os.path.relpath(fn, start=os.path.dirname("../mpl_arrow"))
 
-    return f"https://github.com/mpl-extensions/mpl-arrow/blob/main/mpl_arrow/{fn}{linespec}"  # noqa
+    return f"https://github.com/mpl-extensions/mpl-arrow/blob/main/mpl_arrow/{fn}{linespec}"
