@@ -1,4 +1,5 @@
 """Easily plot nice-looking arrows with matplotlib."""
+
 from importlib.metadata import PackageNotFoundError, version
 
 try:
